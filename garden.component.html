@@ -1,0 +1,14 @@
+<div>
+  <h2>Registro de Huertos</h2>
+  <form (submit)="addGarden()">
+    <input type="text" [(ngModel)]="location" placeholder="Ubicación" />
+    <input type="text" [(ngModel)]="plantTypes" placeholder="Tipos de Plantas" />
+    <input type="number" [(ngModel)]="size" placeholder="Tamaño del Huerto (m²)" />
+    <button type="submit">Añadir Huerto</button>
+  </form>
+
+  <h2>Listado de Huertos</h2>
+  <ul>
+    <li *ngFor="let garden of gardens">{{ garden.location }} - {{ garden.plantTypes }} ({{ garden.size }} m²)</li>
+  </ul>
+</div>

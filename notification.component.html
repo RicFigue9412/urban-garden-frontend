@@ -1,0 +1,6 @@
+<div>
+  <h2>Notificaciones</h2>
+  <ul>
+    <li *ngFor="let notification of notifications">{{ notification.message }} ({{ notification.dateTime | date:'short' }})</li>
+  </ul>
+</div>
